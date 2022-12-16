@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section-hero">
+<div class="hero">
+    <div>
+    <h1>Orders</h1>
+    <a href="/update_personal_details" class="btn btn-info">Edit your order details</a>
+    </div>
+
+    <div id="orders-table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Addressee Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Payment Type</th>
+                    <th scope="col">Total Cost</th>
+                    <th scope="col">Expected delivery date</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in user_data['orders'] %}
+                    <tr>
+                        <td>{{order.timestamp[0:10]}}</td>
+                        <td>{{order.name}}</td>
+                        <td>{{order.address}}</td>
+                        <td>{{order.paymentType}}</td>
+                        <td>£{{order.totalCost}}</td>
+                        <td>{{order.expectedDeliveryDate[0:10]}}</td>
+                        <td>{{order.status}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</section>
+{% endblock %}

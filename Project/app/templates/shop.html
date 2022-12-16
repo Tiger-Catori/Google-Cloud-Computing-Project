@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container shop">
+
+    {% for row in product_info %}
+      <div class="row justify-content-center" style="padding: 5px;">
+        {% for product in row %}
+          {% set product_id = product['_id']['$oid'] %}
+          <div class="col-3">
+            <div class="card">
+              <img class="card-img-top" src="https://storage.cloud.google.com/video-game-products/cloud-images/{{product.imageID}}.jpg" alt="Image of {{product.title}}">
+              <div class="card-body">
+                <h5 class="card-title">{{product.title}}</h5>
+                <p class="card-text">£{{product.pricePerUnit}}</p>
+                <p class="card-text">{{product.ageRating}}</p>
+                {% if user_data %}
+                  <div class="row" style="padding: 5px; justify-content: center;">
+                    <label style="padding-right: 10px; padding-left: 10px;" for="qty">Quantity</label>
+                    <input style="width: 70%;" id="{{product_id}}-qty" type="number" name="qty" class="form-control" value="1" required>
+                  </div>
+                  <button class="btn btn-primary shop-btn" onclick="addToBasket('{{product_id}}')">Add to basket</button>
+                  <p id="{{product_id}}-added" class="card-text" hidden=true></p>
+                {% endif %}
+                {% if user_data.admin %}
+                  <a href="/update_product?id={{product_id}}" class="btn btn-primary">Edit products</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+
+  </div>
+{% endblock %}

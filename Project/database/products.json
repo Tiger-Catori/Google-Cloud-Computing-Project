@@ -1,0 +1,210 @@
+[{
+  "_id": {
+	"$oid": "619bb55c11dd33ac12d5aa0d"
+  },
+  "title": "Red Dead Redemption 2",
+  "ageRating": "18",
+  "pricePerUnit": "49.99",
+  "qty": "12",
+  "imageID": "619bb55c11dd33ac12d5aa0d",
+  "tags": [
+	"Action",
+	"Adventure",
+	"Open-World"
+  ]
+},{
+  "_id": {
+	"$oid": "619bb55c11dd33ac12d5aa0e"
+  },
+  "title": "Call of duty: Modern Warfare",
+  "ageRating": "18",
+  "pricePerUnit": "49.99",
+  "qty": "32",
+  "imageID": "619bb55c11dd33ac12d5aa0e",
+  "tags": [
+	"Shooter"
+  ]
+},{
+  "_id": {
+	"$oid": "619bb55c11dd33ac12d5aa0f"
+  },
+  "title": "League of Legends",
+  "ageRating": "12",
+  "pricePerUnit": "40.00",
+  "qty": "32",
+  "imageID": "619bb55c11dd33ac12d5aa0f",
+  "tags": [
+	"MOBA"
+  ]
+},{
+  "_id": {
+	"$oid": "619bb55c11dd33ac12d5aa10"
+  },
+  "title": "Star Wars Battlefront 2",
+  "ageRating": "15",
+  "pricePerUnit": "70.00",
+  "qty": 32,
+  "imageID": "619bb55c11dd33ac12d5aa10",
+  "tags": [
+	"Action",
+	"Shooter",
+	"Adventure"
+  ]
+},{
+  "_id": {
+	"$oid": "619bb55c11dd33ac12d5aa11"
+  },
+  "title": "Mario Kart 8",
+  "ageRating": "7",
+  "pricePerUnit": "16.00",
+  "qty": 32,
+  "imageID": "619bb55c11dd33ac12d5aa11",
+  "tags": [
+	"Racing"
+  ]
+},{
+  "_id": {
+	"$oid": "619bb55c11dd33ac12d5aa12"
+  },
+  "title": "City Skylines",
+  "ageRating": "3",
+  "pricePerUnit": "405.00",
+  "qty": "7",
+  "imageID": "619bb55c11dd33ac12d5aa12",
+  "tags": [
+	"City-Building",
+	"Simulator"
+  ]
+},{
+  "_id": {
+	"$oid": "61af7fb9f3546563bb951524"
+  },
+  "title": "Microsoft Flight Simulator",
+  "ageRating": "12",
+  "pricePerUnit": "76.00",
+  "qty": "6",
+  "imageID": "61af7fb9f3546563bb951524",
+  "tags": [
+	"Simulator"
+  ]
+},{
+  "_id": {
+	"$oid": "61b079e75b63d5957b768d55"
+  },
+  "title": "Sims 3",
+  "ageRating": "12",
+  "pricePerUnit": "135.00",
+  "qty": 6,
+  "imageID": "61b079e75b63d5957b768d55",
+  "tags": [
+	"Simulation",
+	"Social",
+	"Life"
+  ]
+},{
+  "_id": {
+	"$oid": "61b0ccb0b45156626480401a"
+  },
+  "title": "Rocket League",
+  "ageRating": "3",
+  "pricePerUnit": "269.00",
+  "qty": "2",
+  "imageID": "61b0ccb0b45156626480401a",
+  "tags": [
+	"Sports"
+  ]
+},{
+    "_id": {
+      "$oid": "61b1de7a302b84da67930ae5"
+    },
+    "title": "FIFA 22",
+    "ageRating": "3",
+    "pricePerUnit": "85.00",
+    "qty": "10",
+    "imageID": "61b1de7a302b84da67930ae5",
+    "tags": [
+      "Football",
+      "Simulation"
+    ]
+  },{
+  "_id": {
+	"$oid": "61b1e059887399c67a8aa695"
+  },
+  "title": "F1 2020",
+  "ageRating": "3",
+  "pricePerUnit": "14.99",
+  "qty": "30",
+  "imageID": "61b1e059887399c67a8aa695",
+  "tags": [
+	"Racing",
+	"Simulation"
+  ]
+},{
+  "_id": {
+	"$oid": "61b2012b7ceac3ad6b3915de"
+  },
+  "title": "Animal Crossing: New Horizons",
+  "ageRating": "3",
+  "pricePerUnit": "22.99",
+  "qty": "4",
+  "imageID": "61b2012b7ceac3ad6b3915de",
+  "tags": [
+	"Simulation",
+	"Social",
+	"Life"
+  ]
+},{
+  "_id": {
+	"$oid": "61b208d17e3496b3f63e646b"
+  },
+  "title": "Halo 2",
+  "ageRating": "18",
+  "pricePerUnit": "9.99",
+  "qty": "16",
+  "imageID": "61b208d17e3496b3f63e646b",
+  "tags": [
+	"Action",
+	"Shooter"
+  ]
+},{
+  "_id": {
+	"$oid": "61b22cd2e9dd8c432311257b"
+  },
+  "title": "Super Mario Bros 3",
+  "ageRating": "3",
+  "pricePerUnit": "19.99",
+  "qty": "89",
+  "imageID": "61b22cd2e9dd8c432311257b",
+  "tags": [
+	"Action",
+	"Platform"
+  ]
+},{
+  "_id": {
+	"$oid": "61b74a4f5cfda9b7e637e6e5"
+  },
+  "title": "Grand Theft Auto V",
+  "ageRating": "18",
+  "pricePerUnit": "45.00",
+  "qty": "6",
+  "imageID": "61b74a4f5cfda9b7e637e6e5",
+  "tags": [
+	"Action",
+	"Open-World",
+	"Adventure"
+  ]
+},{
+  "_id": {
+	"$oid": "61b7620a1d191862adfd43f8"
+  },
+  "title": "The Legend of Zelda: Breath of the Wild",
+  "ageRating": "12",
+  "pricePerUnit": "34.99",
+  "qty": "2",
+  "imageID": "61b7620a1d191862adfd43f8",
+  "tags": [
+	"RPG",
+	"Action",
+	"Adventure"
+  ]
+}]

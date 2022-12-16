@@ -1,0 +1,64 @@
+[{
+    "_id": {
+      "$oid": "61b7345c05eba69f312201f2"
+    },
+    "userId": "3FCEQ8ZzLjXsmQwv9Yc8Q4oYOfp1",
+    "email": "michaeladeleye@gmail.com",
+    "name": "Michael Adeleye",
+    "admin": "True",
+    "orders": [
+      {
+        "timestamp": "2021-12-13 15:07:02.188034",
+        "name": "Tom W",
+        "address": "My House\r\nMy Street\r\nMy Town\r\nMy Post code",
+        "paymentType": "card",
+        "content": [
+          {
+            "productId": "619bb55c11dd33ac12d5aa0f",
+            "qty": "1"
+          },
+          {
+            "productId": "619bb55c11dd33ac12d5aa12",
+            "qty": "1"
+          }
+        ],
+        "expectedDeliveryDate": "2021-12-20 15:07:02.191293",
+        "totalCost": "485.4",
+        "status": "Cancelled"
+      },
+      {
+        "timestamp": "2021-12-15 09:45:11.222983",
+        "name": "Harry Potter",
+        "address": "Privet Drive\r\nLittle Whinging\r\nSurrey\r\nEngland",
+        "paymentType": "paypal",
+        "content": [
+          {
+            "productId": "619bb55c11dd33ac12d5aa0d",
+            "qty": "1"
+          },
+          {
+            "productId": "619bb55c11dd33ac12d5aa0f",
+            "qty": "2"
+          },
+          {
+            "productId": "61b1de7a302b84da67930ae5",
+            "qty": "1"
+          }
+        ],
+        "expectedDeliveryDate": "2021-12-22 09:45:11.224528",
+        "totalCost": "267.3",
+        "status": "Dispatched"
+      }
+    ],
+    "basket": []
+  },{
+    "_id": {
+      "$oid": "61b9ded7e4d6e2b45e6d0f43"
+    },
+    "userId": "LIjsPZhUyOSnnora4PxmMQBirg03",
+    "email": "ubicompgolftest@gmail.com",
+    "name": "testy testman",
+    "admin": false,
+    "orders": [],
+    "basket": []
+  }]

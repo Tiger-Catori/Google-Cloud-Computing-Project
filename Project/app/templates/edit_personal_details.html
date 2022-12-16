@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section-hero">
+<div class="hero">
+    <div>
+    <h1>Edit your details and orders</h1>
+    </div>
+
+    <div>
+        <form method="post" action="{{ url_for('update_personal_details') }}" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="userId">ID</label>
+                <input type="text" name="userId" class="form-control" value="{{user_data.userId}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="form-control" value="{{user_data.email}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control" value="{{user_data.name}}" required>
+            </div>
+            <br>
+            <h2>Orders</h2>
+            <div id="orders-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Addressee Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Payment Type</th>
+                            <th scope="col">Total Cost</th>
+                            <th scope="col">Expected delivery date</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in user_data['orders'] %}
+                            <tr>
+                                <td>{{order.timestamp[0:10]}}</td>
+                                <td>{{order.name}}</td>
+                                <td>{{order.address}}</td>
+                                <td>{{order.paymentType}}</td>
+                                <td>£{{order.totalCost}}</td>
+                                <td>{{order.expectedDeliveryDate[0:10]}}</td>
+                                <td>
+                                    <div class="form-group">
+                                        <select class="form-control" name="orderStatusIndex{{loop.index0}}">
+                                        <option value='{{order.status}}' selected>{{order.status}}</option>
+                                        <option value='Cancelled'>Cancelled</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <button type="submit" class="btn btn-default shop-btn">Update</button>
+        </form>
+    </div>
+</div>
+</section>
+
+{% endblock %}

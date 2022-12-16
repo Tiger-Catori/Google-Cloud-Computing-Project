@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+  <h1>Admin Page</h1>
+  <h2>Click each button to show the inputs for that functionality</h2>
+</div>
+
+<div>
+<button data-toggle="collapse" data-target="#create-product-text" type="button" class="btn btn-info">Create Product</button>
+<div id="create-product-text" class="collapse">
+    <form method="post" action="{{ url_for('create_product_submitted_form') }}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="ageRating">Age Rating</label>
+            <textarea type="text" name="ageRating" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pricePerUnit">Price</label>
+            <input type="number" step="0.01" name="pricePerUnit" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="qty">Quantity</label>
+            <input type="number" name="qty" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags as a comma separate list, no spaces, a-z only, 1 tag minimum</label>
+            <input name="tags" pattern="[a-z]+|([a-z]+,)+[a-z]+" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Image Upload</label>
+            <input name="image" type="file" class="form-control" accept="image/jpeg" required>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div><br><br>
+
+<button data-toggle="collapse" data-target="#delete-product-text" type="button" class="btn btn-info">Delete Product</button>
+<div id="delete-product-text" class="collapse">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">ageRating</th>
+                <th scope="col">pricePerUnit</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in product_info %}
+                <tr>
+                    <th scope="row">{{product['_id']['$oid']}}</th>
+                    <td>{{product.title}}</td>
+                    <td>{{product.ageRating}}</td>
+                    <td>£{{product.pricePerUnit}}</td>
+                    <td>{{product.qty}}</td>
+                    <td><img style="max-height: 50px;width: auto;" src="https://storage.googleapis.com/synthetic-cargo-products/{{product.imageID}}.jpg" alt="Image of {{product.title}}"></td>
+                    <td>
+                        <form method="post" action="{{ url_for('delete_product_submitted_form') }}">
+                            <input type="text" name="id" value="{{product['_id']['$oid']}}" style="visibility: hidden;">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div><br><br>
+
+<button data-toggle="collapse" data-target="#view-users" type="button" class="btn btn-info">View Users</button>
+<div id="view-users" class="collapse">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Email</th>
+                <th scope="col">Name</th>
+                <th scope="col">Admin?</th>
+                <th scope="col">Edit</th>
+                <th scope='col'>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customer_data %}
+                <tr>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.admin}}</td>
+                    <td><a href="/edit_user?id={{customer.userId}}" class="btn btn-success">Edit User</a></td>
+                    <td><a href="/delete_user?id={{customer.userId}}" class="btn btn-danger">Delete User</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div><br><br>
+</div>
+
+{% endblock %}

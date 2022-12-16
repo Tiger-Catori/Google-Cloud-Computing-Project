@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* padding: 0;
+  margin: 0; */
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Font family defualts*/
+    --ff-primary: 'Assistant', sans-serif;
+    --ff-secondary: "Istok Web", sans-serif;
+
+    /*Font weight defaults*/
+    --fw-reg: 400;
+    --fw-bold: 400;
+
+    /*Colors default*/
+    /* Inverted colors */
+    --clr-dark: #25242a;
+    --clr-light: #f2f2f2;
+    --clr-accent: #e5e5e5;
+    /* --clr-accent: #d9d04f; */
+    --clr-secondary: #4f4fff;
+
+    /*Font Size*/
+    /*Headings & body*/
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1.6rem;
+
+    /*Box shadow*/
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+html {
+    /* font-size: 10px; */
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of users browsers font size setting */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    font-family: var(--ff-primary);
+    /* font-family: 'Lato', sans-serif; */
+    /* font-family: 'Nanum Myeongjo', serif; */
+    line-height: 1;
+    font-weight: 400;
+    background-color: #f8fcff;
+}
+
+/*****************************************************/
+/* GENRAL REUSABLE COMPONENTS */
+/*****************************************************/
+.container {
+    max-width: 120rem;
+    padding: 1.2rem 0;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    column-gap: 1.2rem;
+    row-gap: 1.2rem;
+}
+
+.grid:not(:last-child) {
+    margin-bottom: 3.2rem;
+}
+
+.grid--1-cols {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--center-v {
+    align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+    font-weight: 400;
+    color: var(--clr-dark);
+    /* color: #45130a; */
+    /* color: #343a40; */
+    letter-spacing: -0.5px;
+}
+
+.heading-primary {
+    font-size: 3.6rem;
+    line-height: 1.05;
+    margin: 3.2rem 0;
+    /* margin-bottom: 1.2rem; */
+    text-align: center;
+    /* border-bottom: #222; */
+}
+
+.heading-secondary {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 2.4rem;
+    color: #000;
+    z-index: 2;
+}
+
+.heading-tertiary {
+    display: inline;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 1;
+    z-index: 1;
+    /* margin-bottom: 3.2rem; */
+}

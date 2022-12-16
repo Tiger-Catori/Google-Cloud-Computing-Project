@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>  <!-- class="other-page" -->
+    <div>
+    <h1>Product created</h1>
+    </div>
+    <div>
+    <p>Here's a review of the information that you sent:</p>
+    <p>
+        <strong>Title</strong>: {{title}} <br>
+        <strong>ageRating</strong>: {{ageRating}} <br>
+        <strong>pricePerUnit</strong>: {{pricePerUnit}} <br>
+        <strong>qty</strong>: {{qty}} <br>
+        <strong>ImageID</strong>: {{imageID}} <br>
+        <strong>genres</strong>: {{tags}} <br>
+        <strong>Server Response</strong>: {{response}}
+    </p>
+    </div>
+</div>
+
+{% endblock %}
